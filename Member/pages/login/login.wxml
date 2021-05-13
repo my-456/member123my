@@ -1,0 +1,30 @@
+<!--用户登录-->
+<view class="body">
+<view class="top">
+	<image class="top_image" mode="aspectFit|aspectFill|widthFix" src='/assets/images/login/head.jpg'></image>
+</view>
+
+<w-tab-control titles="{{titles}}" bind:tabclick="handleTabClick" />
+
+<form bindsubmit="formSubmit">
+	<view class="middle_form_1">
+		<image class="name_img" src="/assets/images/login/name.png" style="width:28rpx;height:30rpx" />
+		<input class="input" name="name" maxlength="20" value="" type="text" placeholder="请输入手机号/邮箱"></input>
+	</view>
+	<view class="middle_form_1">
+  <image class="name_img" src="/assets/images/login/password.png" style="width:20rpx;height:32rpx" />
+		<input class="input" name="password" value="" maxlength="20" type="password" placeholder="请输入密码"></input>
+	</view>
+	<view class="login_submit">
+		<button class="login_btn" formType="submit">
+			<text>登</text><text style="margin-left:40rpx">录</text>
+		</button>
+	</view>
+</form>
+<view class="reg_submit">
+        <text class="new_btn" bindtap="goRegister" >
+         注册
+        </text>
+        <text class="new_btn2" bindtap="goForgetPassword">找回密码</text>
+</view>  
+</view>

@@ -1,0 +1,35 @@
+/* pages/home/childCpn/w-icon/w-icon.wxss */
+.table, .table div {
+  margin: 0 auto;
+  }
+  .table {
+ margin-top: 16.5rpx;
+  display: flex;
+  display: table;
+  width: 90%;
+  border-collapse: collapse; 
+  box-sizing: border-box;
+  padding: 60rpx;
+  overflow: hidden;
+  }
+
+  image{
+    width: 70rpx;
+    height: 70rpx;
+  }
+  .table-tr {
+  display: table-row;
+  }
+  .table-td {
+    padding: 20rpx;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  height: 100rpx;
+  }
+  .v2-text{
+    margin-left: 6rpx;
+    width: 120rpx;
+   font-size: 28rpx;
+    color: #2F3C4B; 
+  }

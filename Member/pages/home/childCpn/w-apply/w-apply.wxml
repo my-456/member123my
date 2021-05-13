@@ -1,0 +1,17 @@
+	<!--申请会员组件-->
+  <button class="apply_btn" bindtap="goApply">
+		<text>申请加入其他专业委员会 / 理事会</text>
+	</button>
+	<text class="m-text2">您的会员号为： {{code}}</text>
+	<view class="m-view2" bindtap="showMask">
+		<image class="m-image" src="/assets/images/home/cer.png" />
+		<text class="m-text3" bindtap='buttonTap'>打印会员证书</text>
+	</view>
+	<view class="mask" hidden="{{flag}}">
+		<canvas canvas-id="myCanvas" style="width:700rpx;height:1000rpx;border: 1px solid;margin:30rpx auto">
+		</canvas>
+		<view class="btn" bindtap="SaveCard">保存图片</view>
+		<view class="closeImg" bindtap="closeMask">
+			<image class="closeImg_image" src="/assets/images/home/error.png"></image>
+		</view>
+	</view>

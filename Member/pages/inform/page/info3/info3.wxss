@@ -1,0 +1,11 @@
+/* pages/inform/page/info3/info3.wxss */
+
+.body{
+  margin-top: 20rpx;
+  margin-left:30rpx ;
+  width: 90%;
+}
+.head{
+  font-size: 50rpx;
+  font-weight: 500;
+}

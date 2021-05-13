@@ -1,0 +1,69 @@
+/* pages/index/login.wxss */
+.body{
+  height:1334rpx ;
+}
+.top_image {
+  width: 100%;
+height: 656rpx;
+}
+
+
+/* =input-------------------------------------------------- */
+.input{
+  padding-left:20rpx;
+  width:90%;
+ height: 108rpx;
+  left: 45rpx;
+  font-size: 30rpx;
+}
+.input-placeholder{
+  color: #93979F;
+  margin-left:25rpx ;
+}
+.middle_form_1{
+
+  display: flex;
+  width: 510rpx;
+  margin-left: 115rpx;
+  border-bottom:2rpx solid #D4D4D4;
+}
+.name_img{
+  padding: 0;
+  margin-top: 40rpx;
+  flex: 1;
+  display:inline-block
+}
+
+
+
+/* 按钮-------------------------------------------------- */
+.login_btn{
+  margin-top:55rpx;
+  width:510rpx !important;
+  height: 90rpx;
+  border-radius: 50rpx;
+  background-color:#2C94F9;
+  color:white;
+  font-size: 34rpx;
+  font-weight: 500;
+  line-height: 50rpx;
+}
+.reg_submit{
+  width:510rpx !important;
+  margin-left: 120rpx;
+  display: flex;
+  font-size: 28rpx;
+  justify-content: space-between;
+}
+.new_btn{
+  margin-top: 6rpx;
+  font-weight: 500;
+  color:#2C94F9;
+  font-size: 28rpx;
+}
+.new_btn2{
+  margin-top: 44rpx;
+  font-weight: 500;
+  color:#4E596A;
+  font-size: 28rpx;
+}

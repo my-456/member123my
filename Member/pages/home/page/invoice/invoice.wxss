@@ -1,0 +1,7 @@
+/* pages/home/page/invoice/invoice.wxss */
+
+image {
+  width: 100%;
+  height: auto;
+  display: block;
+}

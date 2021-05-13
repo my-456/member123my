@@ -1,0 +1,7 @@
+	<!-- 解决方案组件 -->
+	<view class="w-view">
+		<image class="w-img1" src="/assets/images/home/close.png" style="width:100%;height:367rpx" />
+		<view class="w-btn1" bindtap="goInvoice">点击查看</view>
+		<image class="w-img2" src="/assets/images/home/manpower.png" style="width:100%;height:367rpx;" />
+		<view class="w-btn2" bindtap="goCost">点击查看</view>
+	</view>

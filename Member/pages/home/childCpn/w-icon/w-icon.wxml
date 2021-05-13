@@ -1,0 +1,43 @@
+ <!-- 功能部分组件------------------------------------------------------------------------------------------- -->
+
+ <view class="table">
+ 	<view class="table-tr">
+ 		<view class="table-td" bindtap="goNotice">
+ 			<image src="/assets/images/home/table1.png" />
+ 			<view class="v2-text">会员须知</view>
+ 		</view>
+ 		<view class="table-td" bindtap="goInform" >
+ 			<image src="/assets/images/home/table2.png"/>
+ 			<view class="v2-text">活动通知</view>
+ 		</view>
+ 		<view class="table-td" bindtap="goFeed">
+ 			<image src="/assets/images/home/table3.png"/>
+ 			<view class="v2-text">建言献策</view>
+ 		</view>
+		 	<view class="table-td" bindtap="changePassword">
+ 			<image src="/assets/images/home/table7.png"/>
+ 			<view class="v2-text">修改密码</view>
+ 		</view>
+ 		
+ 	</view>
+ 	<view class="table-tr">
+ 		<view class="table-td" bindtap="userEdit">
+ 			<image src="/assets/images/home/table5.png"/>
+ 			<view class="v2-text">修改资料</view>
+ 		</view>
+ 		<view class="table-td" bindtap="updatTle">
+ 			<image src="/assets/images/home/table6.png"/>
+ 			<view class="v2-text">更换手机</view>
+ 		</view>
+		 
+ 	<view class="table-td" bindtap="goAbout">
+ 			<image src="/assets/images/home/table4.png" />
+ 			<view class="v2-text" >合作伙伴</view>
+ 		</view>
+		 
+ 		<view class="table-td" bindtap="gotoLogin">
+ 			<image src="/assets/images/home/table8.png"/>
+ 			<view class="v2-text">退出登录</view>
+ 		</view>
+ 	</view>
+ </view>

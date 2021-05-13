@@ -1,0 +1,130 @@
+<!--pages/home/page/apply/apply.wxml-->
+<view class="v1" wx:if="{{tab}}">
+	<view class="v1-text">Step1.请阅读申请通知</view>
+	<view class="v1-view">
+		<scroll-view scroll-y="true" style=" height: 500rpx;" class="scroll_display">
+			<view class="v1-head">
+				<text class="v1-text1">大连计算机学会会员注册须知</text>
+				<view class="v1-">................................................................</view>
+			</view>
+			<view class="v1-v1">
+				<text class="v1-text2">
+  本会的会员种类为团体（单位）会员和个人会员。
+
+<text class="t-text">一、申请加入本会的会员，必须具备下列条件 </text>
+
+				1、拥护本会的章程；
+				2、有加入本会的意愿；
+				3、在本会的业务领域内具有一定的影响；
+				4、按时缴纳会费。
+
+				<text class="t-text">二、会员入会的程序是：</text>
+
+				1、提交入会申请书；
+				2、经理事会审查通过；
+				3、理事会闭会期间，理事会授权秘书处审查吸纳会员；
+				4、缴纳会费；
+				5、由理事会或理事会授权的秘书处发给会员证。
+
+				<text class="t-text">三、会员享有下列权利：</text>
+
+				1、本会的选举权、被选举权和表决权；
+				2、参加本会的活动；
+				3、获得本会服务的优先权；
+				4、对本会工作的批评建议权和监督权；
+				5、入会自愿、退会自由；
+
+				<text class="t-text">四、会员履行下列义务</text>
+
+				1、遵守本会的章程和各项规定；
+				2、执行本会的决议；
+				3、维护本会合法权益；
+				4、完成本会交办的工作；
+				5、按规定交纳会费；
+				6、向本会反映情况，提供有关资料；
+				7、会员退会应书面通知本会，并交回会员证。
+
+				<text class="t-text">五、会费标准：</text>
+
+				1、团体（单位）会员：理事长缴纳会费8000元/年、副理事长缴纳会费5000元/年；常务理事缴纳会费3000元/年；理事缴纳会费2000元/年；监事缴纳会费2000元/年；会员单位缴纳会费800元/年。
+				2、个人会员：理事长、副理事长、监事长缴纳会费800元/年；常务理事500元/年；理事300元/年；会员100元/年。
+
+				<text class="t-text">六、学会帐户：</text>
+
+				户名: 大连市计算机学会
+				税号：512102005082669505
+				地址电话：大连市沙河口区五四路150-5号 66326496
+				开户行及账号：中国工商银行大连沙河口区支行 3400200709008820468
+				</text>
+			</view>
+		</scroll-view>
+	</view>
+	<!--相关协议-->
+	<view class="v1-check">
+		<checkbox-group bindchange="bindAgreeChange">
+			<label class="weui-agree" for="weuiAgree">
+				<view class="weui-agree__text">
+					<checkbox class="box_check" id="weuiAgree" value="agree" checked="{{}}" />
+					我已详细阅读以上内容，并保证提供的内容真实有效，否则愿意承担一切后果。
+				</view>
+			</label>
+		</checkbox-group>
+		<!--提交按钮-->
+		<view class="weui-btn-area">
+			<button class="v1-b1" size="mini" type="primary" bindtap='submit' disabled='{{btn_disabled}}'>申请会员</button>
+			<button class="v1-b2" size="mini" type="primary" bindtap="goOut1">退出</button>
+		</view>
+	</view>
+</view>
+<!-- ============================================================================================================= -->
+<view class="v1" wx:else>
+	<view class="v1-text">Step2请选择专委会/分会</view>
+	<view class="v1-view">
+		<view class='topTabSwiper'>
+			<view class='title'  bindtap='checkCurrent'>专委会</view>
+			<!-- <view class='tab {{currentData == 1? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>理事会</view> -->
+		</view>
+		<swiper current="{{currentData}}" class='swiper' style="height:580rpx;" duration="300" bindchange="bindchange">
+			<swiper-item>
+				<scroll-view scroll-y="true" style="height:500rpx;" class="scroll_display">
+					<checkbox-group bindchange="checkboxChange">
+						<view class="v-v2">
+							<checkbox disabled="{{flag}}"  class="check" value='智慧海洋专业委员会'>智慧海洋专业委员会</checkbox>
+							<checkbox disabled="{{flag}}"  class="check" value='智慧农业专业委员会'>智慧医疗和健康专业委员会</checkbox>
+							<checkbox disabled="{{flag}}"  class="check" value='区块链专业委员会'>区块链专业委员会</checkbox>
+							<checkbox disabled="{{flag}}"  class="check" value='青年计算机专业协会'>青年计算机专业委员会</checkbox>
+						</view>
+					</checkbox-group>
+						<checkbox-group bindchange="checkboxChange1">
+						<view class="v-v2">
+							<checkbox disabled="" checked="{{flag}}" class="check" value='暂不申请专委会' style="color:red">暂不申请专委会</checkbox>
+						</view>
+					</checkbox-group>
+				</scroll-view>
+			</swiper-item>
+			<!-- <swiper-item>
+				<scroll-view scroll-y="true" style=" height: 500rpx;" class="scroll_display">
+					<checkbox-group bindchange="checkboxChange">
+						<view class="v-v1">
+							<checkbox class="check" value='副理事长'>副理事长</checkbox>
+						</view>
+						<view class="v-v1">
+							<checkbox class="check" value='常务理事'>常务理事</checkbox>
+						</view>
+						<view class="v-v1">
+							<checkbox class="check" value='理事'>理事</checkbox>
+						</view>
+					</checkbox-group>
+				</scroll-view>
+
+			</swiper-item>
+	 -->
+		</swiper>
+	</view>
+	<!--提交按钮-->
+	<view class="weui-btn-area">
+		<button class="v1-b1" size="mini" type="primary" bindtap='submit1' disabled="{{sbm}}">提交</button>
+		<button class="v1-b2" size="mini" type="primary" bindtap="goOut">退出</button>
+	</view>
+</view>
+<w-foot />

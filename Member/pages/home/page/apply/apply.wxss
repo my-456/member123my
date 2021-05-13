@@ -1,0 +1,92 @@
+/* pages/home/page/apply/apply.wxss */
+page{
+  background-color:#e8e8e8;
+ 
+  }
+.v1{
+  border: 1px solid rgb(199, 198, 198);
+  margin: 40rpx 0 0 80rpx;
+width: 80%;
+height: 900rpx;
+background-color: white;
+}
+.v1-text{
+  font-weight: 600;
+  font-size: 25rpx;
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background-color: rgb(234, 238, 238);
+}
+.v1-view{
+ margin: 30rpx;
+width: 90%;
+background-color: #e8e8e8;
+
+padding-top: 50rpx;
+}
+.v1-head{
+text-align: center;
+}
+.v1-text1{
+  color: blue;
+  
+}
+.v1-v1{
+  font-size: 25rpx;
+  padding:30rpx ;
+  width: 90%;
+}
+.v1-text2{
+  width:90%
+}
+.t-text{
+font-size: 28rpx;
+font-weight: 600;
+}
+.v1-check{
+  width: 90%;
+  padding: 30rpx;
+  font-size: 25rpx;
+}
+.box_check{
+  zoom:50%;
+}
+.v1-b1{
+margin-left: 150rpx;
+}
+
+.v1-b2{
+  margin-left: 50rpx;
+}
+.weui-btn-area{
+  margin-top: 30rpx;
+}
+.tab{float:left; width: 33.3333%;text-align: center;padding: 10rpx 0;margin-left: 60rpx; }
+
+.topTabSwiper{border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; zoom: 1; }
+
+.topTabSwiper:after{content: ""; clear: both;display: block;}
+
+.tabBorer{border-bottom: 1px solid #f00; color: #f00;}
+
+.swiper{width: 100%;}
+
+.swiper_con{text-align: center; width: 100%; height: 50%; padding: 80rpx 0;}
+swiper-item{
+
+ padding-left: 20rpx;
+}
+.check{
+  margin-top: 20rpx;
+}
+.v-v2{
+  margin-left: 18rpx;
+
+}
+.title{
+  text-align: center;
+  font-weight: 500;
+  padding: 10rpx 0 10rpx 0;
+}

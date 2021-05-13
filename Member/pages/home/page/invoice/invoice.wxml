@@ -1,0 +1,2 @@
+<!--pages/home/page/invoice/invoice.wxml-->
+<image bindload="imgOnLoad" src="https://www.flexiblejob.cn/imgs/JSFW.png" mode="widthFix"></image>

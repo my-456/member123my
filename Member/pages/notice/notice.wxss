@@ -1,0 +1,30 @@
+/* pages/notice/notice.wxss */
+page{
+  padding-bottom:40rpx ;
+}
+.body{
+  margin-left: 30rpx;
+  margin-bottom: 40rpx;
+  width: 680rpx;
+  height: 2500rpx;
+}
+.head{
+font-size: 40rpx;
+font-weight: 500;
+
+}
+.v1{
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: rgb(93, 145, 197);
+}
+.t1{
+  color: rgba(144, 145, 145, 0.541);
+  margin-left: 10rpx;
+}
+.t2{
+  margin-top: 40rpx;
+}
+view{
+  margin-top:10rpx ;
+}

@@ -1,0 +1,20 @@
+/* pages/home/childCpn/w-foot/w-foot.wxss */
+.view{
+  margin-top: 106rpx;
+  font-size: 24rpx;
+  color: #3C4B56;
+  width: 500rpx;
+  margin-left: 132rpx;
+  margin-bottom: 60rpx;
+  text-align: center;
+}
+
+.text1{
+  
+  display: block;
+  margin-bottom: 32rpx;
+}
+.text2{
+  display: block;
+  margin-bottom: 10rpx;
+}

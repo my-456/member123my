@@ -1,0 +1,13 @@
+<!-- 轮播图 -->
+<view class="wire"></view>
+  <swiper circular indicator-dots autoplay interval="3000" duration="1000" indicator-active-color="white">
+			<swiper-item>
+				<image class="v3-img"  src="/assets/images/home/close.png" mode="scaleToFill"></image>
+        <view class="w-btn1" bindtap="goInvoice">点击查看</view>
+			</swiper-item>
+      <swiper-item>
+				<image class="v3-img"  src="/assets/images/home/manpower.png" mode="scaleToFill"></image>
+        <view class="w-btn2" bindtap="goCost">点击查看</view>
+			</swiper-item>
+	</swiper>
+  <view class="wire"></view>

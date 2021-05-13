@@ -1,0 +1,42 @@
+<!--建言献策-->
+<view class="v1">
+<view class="v1">
+ <!-- <text class="t1">* </text><text class="t2"> 标题</text>
+<textarea  name="headline"  class="v1-input" placeholder="请输入标题，不超过22个字" maxlength="22" bindinput="headline"></textarea> -->
+<view class="v2"></view>
+ <text class="v-t1">* </text><text class="v-t2"> 请输入内容</text>
+<textarea name="content" class="v1-input2" placeholder="请输入内容，不超过500个字" maxlength="500" bindinput="content"></textarea>
+
+	<view class="verify">
+			<text class="label"> *</text><text class="label2"> 验证码</text>
+
+	<view class="result_inner_input">
+				<input name="makecode" value="" class="input_input" bindinput='makecodeInput' placeholder="请输入验证码" placeholder-class="input_input1"></input>
+				<view class='makecode'>{{code}}</view>
+				<view class="getcode" bindtap='getcode'>换一张</view>
+			</view>
+  </view>
+  			<view class="result_btn">
+				<view  class="btn2" bindtap="submit">提交</view>
+			</view>
+</view>
+
+
+<view class="v1-v">联系方式</view>
+<view class="v1-v2">
+<image class="img" src="/assets/images/feedback/tel.png"></image>
+<view class="tel">联系电话：13889509660</view>
+<view class="btn" data-reply-phone="13889509660" bindtap="phoneCall">
+拨通
+</view> 
+</view>
+
+<view class="v1-v2">
+<image style="width:43rpx;height:36rpx;" class="img" src="/assets/images/feedback/gongzhonghao(1).png"></image>
+<view class="tel">微信号：<text selectable='true' bindlongtap='copy'>dlmunan</text></view>
+<view class="btn"  bindtap='copyBtn' >
+复制
+</view>
+</view>
+<view class="v2-text">请通过以上方式,留下您宝贵的意见吧！</view>
+</view>

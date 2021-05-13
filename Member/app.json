@@ -1,0 +1,35 @@
+{
+  "pages": [
+  
+    "pages/home/home",
+    "pages/login/login",
+    "pages/personal/personal",
+    "pages/register/register",
+    "pages/changePsw/changePsw",
+    "pages/about/about",
+    "pages/home/page/invoice/invoice",
+    "pages/home/page/cost/cost",
+    "pages/home/page/apply/apply",
+    "pages/feedback/feedback",
+    "pages/notice/notice",
+    "pages/inform/inform",
+    "pages/inform/page/info/info",
+    "pages/inform/page/info2/info2",
+    "pages/inform/page/info3/info3",
+    "pages/change/change",
+    "pages/forgetPassword/forgetPassword"
+  ],
+  "usingComponents": {
+    "w-foot":"/component/w-foot/w-foot"
+    
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

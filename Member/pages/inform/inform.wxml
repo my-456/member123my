@@ -1,0 +1,19 @@
+<!--活动须知-->
+<view class="box">
+<view class="text1" bindtap="go1"><text>关于筹备成立大连市计算机学会智慧农业专业委员会的通知</text>
+<image  mode="widthFix" class="img" src="/assets/images/inform/timg.jpg"></image>
+</view>
+<view class="time">2020年7月10日</view>
+</view>
+<view class="box">
+<view class="text1" bindtap="go2"><text>关于成立大连市计算机学会智慧海洋专业委员会的通知</text>
+<image  mode="widthFix" class="img" src="/assets/images/inform/timgs.jpg"  style="width:290rpx"></image>
+</view>
+<view class="time">2020年1月19日</view>
+</view>
+<view class="box">
+<view class="text1" bindtap="go3"><text>大连市计算机学会关于成立数字健康工作组的通知</text>
+<image  mode="widthFix" class="img" src="/assets/images/inform/789456.jpg" style="width:280rpx"></image>
+</view>
+<view class="time">2019年12月9日</view>
+</view>

@@ -1,0 +1,31 @@
+<!--修改密码-->
+<view class="top">
+  <view class='goback' bindtap="goback">返回首页</view>
+  <view class='other'></view>
+</view>
+<view class="top_copy"> </view>
+<view class="middle">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class='row'>
+      <label>旧密码 <text class="require">*</text> </label> 
+      <input type='password' name='oldPassword' maxlength="20" value='' />
+    </view>
+    <view class='row'>
+      <label>新密码 <text class="require">*</text> </label> 
+      <input type='password' name='password' maxlength="20" value='' />
+    </view>
+    <view class='row'>
+      <label>确认新密码 <text class="require">*</text> </label> 
+      <input type='password' name='repassword' maxlength="20" value='' />
+    </view>
+    <view class='dashed'></view>
+    <view class="form_submit">
+      <button class="submit_btn" formType="submit">保存</button>
+    </view>
+  </form>
+</view>
+
+<view class="v3">
+<text class="v3-text1">薪管家会员管理系统  联系电话：400-600-1456</text>
+<text class="v3-text2">技术支持：薪管家(辽宁)网络科技有限公司</text>
+</view>

@@ -1,0 +1,16 @@
+
+<!-- 专业列表组件 -->
+<view class="table">
+		<view class="tr bg-w">
+			<view class="th">序号</view>
+			<view class="th">所属分支机构</view>
+			<view class="th ">会员类型</view>
+		</view>
+		<block style="background-color:red" class='root' wx:for-index="index" wx:for="{{listData}}" wx:key="{{index}}">
+			<view class="tr bg-g">
+				<view class="flex-view-item{{index%2==0? 'td':'even'}}">{{index+1}}</view>
+				<view class="flex-view-item{{index%2==0? 'td':'even'}}">{{item.text}}</view>
+				<view class="flex-view-item{{index%2==0? 'td':'even'}}">{{member}}</view>
+			</view>
+		</block>
+	</view>

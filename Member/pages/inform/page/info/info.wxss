@@ -1,0 +1,9 @@
+/* pages/inform/page/info/info.wxss */.body{
+  margin-top: 20rpx;
+  margin-left:30rpx ;
+  width: 90%;
+}
+.head{
+  font-size: 50rpx;
+  font-weight: 500;
+}

@@ -1,0 +1,21 @@
+{
+  "usingComponents": {
+    "w-icon":"./childCpn/w-icon/w-icon",
+    "w-head":"./childCpn/w-head/w-head",
+    "w-scheme":"./childCpn/w-scheme/w-scheme",
+    "w-list":"./childCpn/w-list/w-list",
+    "w-apply":"./childCpn/w-apply/w-apply",
+    "w-slideshow":"./childCpn/w-slideshow/w-slideshow"
+  },
+ 
+  "navigationBarTitleText": "首页",
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "首页",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+     
+  }
+  
+}

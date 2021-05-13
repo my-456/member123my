@@ -1,0 +1,28 @@
+/* pages/inform/inform.wxss */
+
+.box{
+   width: 90%;
+  margin-top: 40rpx;
+  margin-left:40rpx;
+  border-bottom:1rpx solid #E6E6E6 ;
+
+}
+.text1{
+  font-size: 30rpx;
+  width:600rpx;
+  height: 140rpx;
+  color: #2F3B4B;
+  display: flex;
+  justify-content:space-between
+  
+}
+.time{
+  font-size: 24rpx;
+  position: relative;
+  top:-35rpx ;
+  color: #E5E5E5;
+}
+.img{
+  width:320rpx;
+  height:150rpx ;
+}

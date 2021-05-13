@@ -1,0 +1,6 @@
+/* pages/home/page/cost/cost.wxss */
+image {
+  width: 100%;
+  height: auto;
+  display: block;
+}

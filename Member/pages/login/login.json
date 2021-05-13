@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "w-tab-control":"./childCpn/w-tab-control/w-tab-control"
+  },
+
+  "navigationBarTitleText": "用户登录",
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  }
+}

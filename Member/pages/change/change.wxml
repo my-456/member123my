@@ -1,0 +1,18 @@
+<!--pages/change/change.wxml-->
+<!--修改密码-->
+<view class="body">
+<view class='changeInfo'>
+  <view class='changeInfoName'>
+     <input placeholder='请输入手机号' bindinput='getPhoneValue' value='{{phone}}' style='width:100%'/>
+  </view>
+
+  <view class='changeInfoName'>
+     <input placeholder='请输入验证码' bindinput='getCodeValue' value='{{code}}' style='width:50%;'/>
+     <button class='codeBtn' bindtap='getVerificationCode' disabled='{{disabled}}' >{{codename}}</button>
+  </view>
+  <button class='changeBtn' bindtap="complete">保存</button>
+</view>
+</view>
+<view class="v3">
+<w-foot/>
+</view>

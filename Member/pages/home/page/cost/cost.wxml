@@ -1,0 +1,2 @@
+<!--pages/home/page/cost/cost.wxml-->
+<image bindload="imgOnLoad" src="https://www.flexiblejob.cn/imgs/rlcbg.png" mode="widthFix"></image>

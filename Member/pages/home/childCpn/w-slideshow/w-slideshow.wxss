@@ -1,0 +1,45 @@
+/* pages/home/childCpn/w-slideshow/w-slideshow.wxss */
+.wire{
+  width: 100%;
+  height: 30rpx;
+  background-color: #FBFBFB;
+}
+
+  swiper{
+    width: 100%;
+    height:350rpx;
+  }
+  .v3-img{
+      width: 100%;
+      height: 100%;
+    }
+    .w-btn1{
+      text-align: center;
+      width: 173rpx;
+      height: 40rpx;
+      background-color: #fff;
+      position: relative;
+      top: -130rpx;
+      border-radius: 40rpx;
+      font-size: 24rpx;
+      color: rgb(239, 37,37, 0.8);
+      text-shadow: 0.5px 0.5px 0.5px grey;
+      left:52rpx ;
+      padding-top: 6rpx;
+    }
+    .w-btn2{
+      padding: 0;
+      text-align: center;
+      width: 173rpx;
+      height: 40rpx;
+      background-color: #fff;
+      position:relative;
+      margin-top: -140rpx;
+      border-radius: 40rpx;
+      font-size: 24rpx;
+      color: rgb(239, 37,37, 0.8);
+      text-shadow: 0.5px 0.5px 0.5px grey;
+      margin-left:400rpx ;
+      padding-top: 6rpx;
+    }
+    

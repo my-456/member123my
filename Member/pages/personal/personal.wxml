@@ -1,0 +1,317 @@
+<!--修改资料-->
+<view class="top">
+    <view class='goback' bindtap="goback">返回首页</view>
+    
+    <view class='other'></view>
+  </view>
+<view class="top_copy"> </view>
+<view class="box">
+  <view class="form">
+    <view class="form_top">
+      <view class="top2_left">
+        <image class="top2_image" mode="aspectFit|aspectFill|widthFix" src='/assets/images/personal/user.png'></image>
+      </view>
+      <view class="top2_right" selectable="false" space="false" decode="false">
+      修改个人信息
+      </view>
+    </view>
+    <view class="main"> 
+      <view class="main"> 
+        <view class="main_1">个人头像 <text class="require"></text></view>
+        <view class="main_2"><text>(建议图片：80:100/[宽:高]比例</text><text class="bold"> (此为证书打印规定尺寸比例) </text><text>，且文件小于3M，支持JPG、JPEG、PNG、BMP格式)</text></view>
+        <view class="main_3">
+          <view class="main_3_1">
+            <view class="">
+              <image class="image" wx:if="{{imgPath}}" src="{{imgPath}}" mode='widthFix' bindtap="previewImg"></image>
+              <view class="main_3_1_1">个人头像</view>
+            </view>
+            <view wx:if="{{imgPath}}">
+              上传成功
+            </view>
+          </view>
+          <button class="upload_btn" bindtap="selectImg">点击上传</button>
+        </view>
+        <view class="main2">
+          <form bindsubmit="formSubmit">
+            <view class='row'>
+              <label>手机号 <text class="require">*</text> </label> 
+              <input class='disabled' type='text' name='telephone' value='{{userList.telephone}}' disabled='true' placeholder=""/>
+            </view>
+            <view class='row'>
+              <label>邮箱 <text class="require" placeholder="请输入邮箱">*</text> </label> 
+              <input type='text' name='email' value='{{userList.email}}' />
+            </view>
+            <view class='row'>
+              <label>微信号 <text class="require"> </text> </label> 
+              <input type='text' name='weChatNumber' maxlength="20" value='{{userList.weChatNumber}}' placeholder="请输入微信号" />
+            </view>
+            <view class='row'>
+              <label>姓名 <text class="require">*</text> </label> 
+              <input type='text' name='name'  maxlength="10" value='{{userList.name}}' placeholder="请输入姓名" />
+            </view>
+            
+            <view class='row'>
+              <label>姓名拼音 <text class="require"></text> </label> 
+              <view class="">
+                <view class="row_left">
+                  <label>姓的拼音 <text class="require"></text> </label> 
+                  <input type='text' maxlength="10" name='familyNameSpell' value='{{userList.familyNameSpell}}' bindinput="lastName"
+                   value="{{lastName}}" title="" 
+                   placeholder="请输入姓的拼音"
+                   />
+                </view>
+                <view class="row_right">
+                  <label>名的拼音 <text class="require"></text> </label> 
+                  <input type='text' maxlength="15" name='firstNameSpell' value='{{userList.firstNameSpell}}' bindinput="firstName"
+                   value="{{firstName}}" title=""  
+                   placeholder="请输入名的拼音"
+                  />
+                </view>
+              </view>
+              <label>首字母大写，其余小写（如：李明-Li Ming）</label> 
+            </view>
+            <view class='row'>
+              <label>性别 <text class="require">*</text> </label>
+              <input class="" name="sex" value="{{sex}}" type="text" hidden="true" />
+              <radio-group class="radio-group" bindchange="sexChange">
+                <label class="radio"  wx:if="{{sex == '男'}}">
+                    <radio value="男" checked="true"/>男
+                </label>
+                <label class="radio" wx:else>
+                    <radio value="男" />男
+                </label>
+                <label class="radio" wx:if="{{sex == '女'}}">
+                    <radio value="女" checked="true"/>女
+                </label>
+                <label class="radio" wx:else>
+                    <radio value="女" />女
+                </label>
+              </radio-group>
+            </view>
+            <view class='row'>
+              <label>出生年月 <text class="require">*</text> </label> 
+              <picker mode="date" value="{{date}}" start="" end="" bindchange="bindDateChange" >
+                
+                <view class="picker">
+                  <input type='text' name='birthday' value='{{date}}' disabled  placeholder="请选择出生年月"/>
+                </view>
+              </picker>
+            </view>
+            <view class='row'>
+              <label>最高学历 <text class="require">*</text> </label>
+              
+              <input class="" name="highestEducation" value="{{highestEducation}}" type="text" hidden="true" />
+              <radio-group class="radio-group" bindchange="highestEducationChange">
+                
+                <label class="radio"  wx:if="{{highestEducation == '博士'}}">
+                    <radio value="博士" checked="true"/>博士
+                </label>
+                <label class="radio"  wx:else>
+                    <radio value="博士" />博士
+                </label>
+                <label class="radio"  wx:if="{{highestEducation == '研究生'}}">
+                    <radio value="研究生" checked="true"/>研究生
+                </label>
+                <label class="radio"  wx:else>
+                    <radio value="研究生" />研究生
+                </label>
+                <label class="radio"  wx:if="{{highestEducation == '本科'}}">
+                    <radio value="本科" checked="true"/>本科
+                </label>
+                <label class="radio"  wx:else>
+                    <radio value="3" />本科
+                </label>
+                <label class="radio"  wx:if="{{highestEducation == '大专及以下'}}">
+                    <radio value="大专及以下" checked="true"/>大专及以下
+                </label>
+                <label class="radio"  wx:else>
+                    <radio value="大专及以下" />其他
+                </label>
+              </radio-group>
+            </view>
+            <view class='row'>
+              <label>最高学位 <text class="require">*</text> </label>
+              <input class="" name="highestDegree" value="{{highestDegree}}" type="text" hidden="true" />
+              <radio-group class="radio-group" bindchange="degreeChange">
+                <label class="radio"  wx:if="{{highestDegree == '博士'}}">
+                    <radio value="博士" checked="true"/>博士
+                </label>
+                <label class="radio"  wx:else>
+                    <radio value="博士" />博士
+                </label>
+                <label class="radio"  wx:if="{{highestDegree == '硕士'}}">
+                    <radio value="硕士" checked="true"/>硕士
+                </label>
+                <label class="radio"  wx:else>
+                    <radio value="硕士" />硕士
+                </label>
+                <label class="radio"  wx:if="{{highestDegree == '学士'}}">
+                    <radio value="学士" checked="true"/>学士
+                </label>
+                <label class="radio"  wx:else>
+                    <radio value="学士" />学士
+                </label>
+                <label class="radio"  wx:if="{{highestDegree == '其他'}}">
+                    <radio value="其他" checked="true"/>其他
+                </label>
+                <label class="radio"  wx:else>
+                    <radio value="其他" />其他
+                </label>
+              </radio-group>
+            </view>
+            <view class='row'>
+              <label>证件类型 <text class="require">*</text> </label> 
+              <picker bindchange="typeChange" value="{{certificateType}}" range="{{cardType}}">
+                <view class="picker">
+                  <input type='text' name='certificateType' value="{{cardType[certificateType]}}" disabled  placeholder="请选择证件类型"/>
+                </view>
+              </picker>
+            </view>
+            <view class='row'>
+              <label>证件号码 <text class="require">*</text> </label> 
+              <input type='text'  maxlength="20" name='certificateNumber' value='{{userList.certificateNumber}}' required="true" placeholder="请输入身份证号" required/>
+            </view>
+            <view class='row'>
+              <label>民族 <text class="require">* </text> </label> 
+              <input type='text'  maxlength="10" name='nation' value='{{userList.nation}}' placeholder="例:汉族 朝鲜族" bindblur="nation"/>
+            </view>
+            <view class='row'>
+              <label>党派 <text class="require">*</text> </label> 
+              <picker bindchange="partyChange" value="{{partyGroupings}}" range="{{partyList}}">
+                <view class="picker">
+                  <input type='text' name='partyGroupings' value="{{partyList[partyGroupings]}}" disabled placeholder="请选择党派" />
+                </view>
+              </picker>
+            </view>
+            <view class='row'>
+              <label>所属地区 <text class="require">*</text> </label> 
+              <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+                <view class="picker">
+                  <input type='text' name='address' value="{{region[0]}} {{region[1]}} {{region[2]}}" disabled placeholder="请选择所属地区" />
+                </view>
+              </picker>
+            </view>
+            <view class='dashed'>
+              
+            </view>
+            <view class='row'>
+              <label>专业 <text class="require">*</text> </label> 
+              <input type='text' name='profession' maxlength="20" value='{{userList.profession}}' placeholder="请填写专业名称" />
+            </view>
+            <view class='row'>
+              <label>技术职称 <text class="require">*</text> </label>
+              
+              <input class="" name="technicalTitles" value="{{technicalTitles}}" type="text" hidden="true" />
+              <radio-group class="radio-group" bindchange="technicalChange">
+                
+                <label class="radio"  wx:if="{{technicalTitles == '正高级'}}">
+                    <radio value="正高级" checked="true"/>正高级
+                </label>
+                <label class="radio"  wx:else>
+                    <radio value="正高级" />正高级
+                </label>
+                <label class="radio"  wx:if="{{technicalTitles == 2}}">
+                    <radio value="2" checked="true"/>副高级
+                </label>
+                <label class="radio"  wx:else>
+                    <radio value="2" />副高级
+                </label>
+                <label class="radio"  wx:if="{{technicalTitles == 3}}">
+                    <radio value="3" checked="true"/>中级
+                </label>
+                <label class="radio"  wx:else>
+                    <radio value="3" />中级
+                </label>
+                <label class="radio"  wx:if="{{technicalTitles == 4}}">
+                    <radio value="4" checked="true"/>初级
+                </label>
+                <label class="radio"  wx:else>
+                    <radio value="4" />初级
+                </label>
+              </radio-group>
+            </view>
+            <view class='dashed'>
+              
+            </view>
+            <!-- <view class='row'>
+              <label>社会任职 <text class="require"></text> </label> 
+              <picker bindchange="bindPickerChange" value="{{socialOffice}}" range="{{positionList}}">
+                <view class="picker">
+                  <input type='text' name='socialOffice' value="{{positionList[socialOffice]}}" disabled placeholder="请选择社会任职"/>
+                </view>
+              </picker>
+            </view> -->
+<!-- 
+               <view class='row'>
+              <label>职务 <text class="require">*</text> </label> 
+              <picker bindchange="bindPickerChanges" value="{{job}}" range="{{positionLists}}">
+                <view class="picker">
+                  <input type='text' name='job' value="{{positionLists[job]}}" disabled placeholder="请选择职务"/>
+                </view>
+              </picker>
+            </view> -->
+
+            <view class='row'>
+              <label>会员类型<text class="require">*</text> </label> 
+              <picker bindchange="bindTypeChanges" value="{{addType}}" range="{{typeLists}}">
+                <view class="picker">
+                  <input type='text' name='addType' value="{{typeLists[addType]}}" disabled placeholder="请选择会员类型"/>
+                </view>
+              </picker>
+            </view>
+            
+            <view class='row'>
+              <label>工作单位 <text class="require">*</text> </label> 
+              <input type='text' name='company' value='{{userList.company}}' placeholder="请填写您的工作单位或填写:无" />
+            </view>
+            <view class='row'>
+              <label>部门 <text class="require">*</text> </label> 
+              <input type='text' name='department' value='{{userList.department}}' placeholder="请填写您的科室或填写:无"/>
+            </view>
+
+            <view class='row'>
+              <label>单位任职 <text class="require">*</text> </label> 
+              <input type='text' name='companyOffice' value='{{userList.companyOffice}}' placeholder="请输入单位任职" />
+            </view>
+            <view class='row'>
+              <label>单位地址 <text class="require"></text> </label> 
+              <input type='text' maxlength="40" name='companyAddress' value='{{userList.companyAddress}}' placeholder="输入单位地址" />
+            </view>
+            <view class='row'>
+              <label>邮编 <text class="require"></text> </label> 
+              <input type='number' maxlength="10" name='postcode' value='{{postcode}}' placeholder='请输入正确的邮政编码，如：100000' bindinput="postcode"
+                title=""   
+              />
+          
+            </view>
+            <view class='row'>
+              <label>单位电话 <text class="require"></text> </label> 
+              <input type='text' maxlength="20" name='companyTelephone' value='{{userList.companyTelephone}}' placeholder='请输入格式正确的电话号码，如：010-89292552' />
+            </view>
+            <view class='row'>
+              <label>传真 <text class="require"></text> </label> 
+              <input type='text' maxlength="20" name='fax' value='{{userList.fax}}' placeholder='请输入格式正确的传真号码，如：010-89292552' />
+            </view>
+            <view class='dashed'>
+              
+            </view>
+            <view class=''>
+              <view class="form_goback">
+                <button class="goback_btn" bindtap="goback">返回</button>
+              </view>
+              
+              <view class="form_submit">
+                <button class="submit_btn" formType="submit">保存</button>
+              </view>
+            </view>
+            <view class="form_bottom"></view>
+        </form>
+        </view>
+      </view>
+    </view>
+  </view>
+<view class="v3">
+<text class="v3-text1">薪管家会员管理系统  联系电话：400-600-1456</text>
+<text class="v3-text2">技术支持：薪管家(辽宁)网络科技有限公司</text>
+</view>
+</view> 

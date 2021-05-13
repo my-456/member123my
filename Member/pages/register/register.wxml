@@ -1,0 +1,72 @@
+<!--用户注册-->
+<!-- 导航部分 -->
+<!-- <view class="top">
+	 <image class="top_image" mode="aspectFit|aspectFill|widthFix" src='/assets/images/reg/head.jpg'></image> 
+</view> -->
+<view class="top2">
+
+	<view class="top2_left">
+		<view class="top2_left_1">
+			<image class="top2_image" mode="aspectFit|aspectFill|widthFix" src='/assets/images/reg/user.png'></image>
+		</view>
+		<view class="top2_right_1" selectable="false" space="false" decode="false">
+			新会员注册
+		</view>
+	</view>
+
+</view>
+
+<!-- 表单部分 -->
+<view class="body">会员申请信息</view>
+<view class="body2">
+	<form class='form' bindsubmit="formSubmit">
+		<text class='label'>邮箱<text class="label2">*</text></text>
+		<input bindinput="getEmail" class='int' name="email" placeholder="请输入邮箱"></input>
+		<view class="text1">通过邮箱发送重要通知，请准确填写，<text class="text2">若提示电子邮箱已被注册-->点击</text>
+			<navigator url="../index/login" class="nav"><text class="text3">这里</text></navigator><text>登录系统</text>
+			<navigator url="" class="nav"><text class="text4">查看帮助</text></navigator>
+		</view>
+		<text class='label'>{{tel}}<text class="label2">*</text></text>
+		<input bindinput="getPhone" class='int' name="phone" type="number" maxlength="11" placeholder="请输入手机号"></input>
+		<view class="text1">通过手机号码发送重要通知，请准确填写，<text class="text2">若提示号码已被注册-->点击</text>
+			<navigator url="../index/login" class="nav"><text class="text3">这里</text></navigator><text>登录系统</text>
+			<navigator url="" class="nav"><text class="text4">查看帮助</text></navigator>
+		</view>
+		<text class='label'>姓名<text class="label2">*</text></text>
+		<input bindinput="getName" class='int' name="name" placeholder="请输入姓名"></input>
+
+		<!-- 省市区选择 -->
+		<view class="section">
+			<view class="label">省市区<text class="label2">*</text></view>
+			<picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+				<view class="picker">
+					{{region[0]}} {{region[1]}} {{region[2]}}
+				</view>
+			</picker>
+		</view>
+		<text class='label'>工作单位<text class="label2">*</text></text>
+		<input class='int' name="job" type="text" bindinput="getInputJob" placeholder="" placeholder-class="input"></input>
+		<text class='label'>密码<text class="label2">*</text></text>
+		<input class='int' name="password" type="password" bindinput="getInputPassword" placeholder="请设置登录密码" maxlength="16"></input>
+		<view class="text1">6-16个字符,推荐使用数字、字符和特殊符号组合</view>
+		<text class='label'>确认密码<text class="label2">*</text></text>
+		<input class='int' name="apassword" type="password" bindinput="getInputAffirmPassword" placeholder="请确认登录密码"></input>
+		<!-- 验证码 -->
+		<view class="verify">
+			<view class="label">请在下方输入图形验证码<text class="label2">*</text></view>
+			<view class="result_inner_input">
+				<input name="makecode" value="" class="input_input" bindinput='makecodeInput' placeholder="请输入验证码" placeholder-class="input_input1"></input>
+				<view class='makecode'>{{code}}</view>
+				<view class="getcode" bindtap='getcode'>换一张</view>
+			</view>
+			<view class="result_btn">
+				<button class="btn1" bindtap="goback"  size="mini">返回</button>
+				<button class="btn2" form-type="submit" size="mini">注册</button>
+			</view>
+		</view>
+	</form>
+</view>
+<view class="v3">
+	<text class="v3-text1">薪管家会员管理系统  联系电话：400-600-1456</text>
+	<text class="v3-text2">技术支持：薪管家(辽宁)网络科技有限公司</text>
+</view>

@@ -1,0 +1,125 @@
+.apply_btn{
+  width: 527rpx !important;
+  margin-top:100rpx;
+  height: 80rpx;
+  border-radius: 50rpx;
+  background-color:#2C94F9;
+  color:white;
+  font-size:28rpx;
+  font-weight: 500;
+  line-height: 45rpx;
+}
+.m-text2{
+position: relative;
+top: 26rpx;
+left:205rpx;
+color: #BAB9B9;
+font-size: 24rpx;
+}
+
+.m-image{
+  position: relative;
+  width:25rpx ;
+  height: 27rpx;
+  margin: 0;
+  top: 4rpx;
+}
+.m-text3{
+  top: 35rpx;
+  font-size: 24rpx;
+  color: #3C4B56;
+}
+.m-view2{
+  position: relative;
+  top: 35rpx;
+  margin-left: 530rpx;
+  font-size: 24rpx;
+  color: #3C4B56;
+}
+
+.mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(34, 34, 34, 0.822);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* 设置遮罩内容样式 */
+.maskContent {
+  width: 70%;
+  background: rgb(63, 62, 62);
+  border-radius: 5px;
+  padding: 30rpx;
+}
+/* 设置关闭按钮图片的位置 */
+.closeImg {
+  position: fixed;
+  top: 40rpx;
+  right: 40rpx;
+}
+/* 设置关闭按钮宽高 */
+.closeImg_image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.btn{
+  width: 80%;
+  margin: 20rpx auto;
+  background: #2C94F9;
+  color: #fff;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  text-align: center;
+  border-radius: 3px;
+}
+.m-img{
+width: 100%;
+height: 100%;
+
+}
+canvas {
+  width: 80%;
+  height: 70%;
+  border-radius: 10rpx;
+  margin: 20rpx auto;
+  box-shadow: 0 6rpx 6rpx rgba(0,0,0,.1);
+  padding-bottom: 100rpx;
+  
+}
+
+  /* 会员证样式 ----------------------------------------------------------------*/
+  .logo{
+    position: absolute;
+    width: 100rpx;
+    height: 50rpx;
+    margin-top: 10rpx;
+    margin-left: -130rpx;
+  }
+  .v1{
+    width:100%;
+    height:290rpx;
+    background: linear-gradient(to left,#fdf9f6,#efd5bc);
+    position: absolute;
+    
+  }
+  .v1-image{
+    margin-top: 20rpx;
+    width:105rpx;
+    height:105rpx;
+    
+  }
+  .v1-QRcode-text{
+    position: relative;
+    display: block;
+    width:184rpx;
+    height:17rpx;
+    font-size:18rpx;
+    font-weight:400;
+    color:rgba(27,27,27,1);
+    right: 40rpx;
+  }

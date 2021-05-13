@@ -1,0 +1,26 @@
+<!-- 个人信息组件 -->
+	<image class="head-img" src="/assets/images/home/img.jpg" />
+	<view class="v1-photo">
+		<image class="imgPhoto" src="{{photo}}" mode="aspectFill"></image>
+		<text class="v1-text3">有效期 ：  {{time}}</text>
+	</view>
+	<view class="v1-va">
+		<text class="v1-text1">{{name}}</text>
+		<view class="v1-vip" style="width:124rpx;height:28rpx">
+			<image class="img-vip" src="{{vipType}}" />
+			<text class="t1-vip">{{member}}</text>
+		</view>
+		<text class="v1-text2">TEL ：  {{tel}}</text>
+		<text class="v1-text2">Email ：  {{email}}</text>
+		<view class="v1-code" bindtap="getCode">
+			<image class="img-code" src="/assets/images/home/code.png" />
+			<view class="t1-code">会员码</view>
+		</view>
+		<modal title="请扫描下方二维码进入公众号" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCandel">
+			<view>
+				<image class="image" src="{{codeImg}}" mode='aspectFill' style="width:500rpx;height:500rpx"></image>
+			</view>
+		</modal>
+	</view>
+	<view class="card">
+	</view>

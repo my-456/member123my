@@ -1,0 +1,60 @@
+/* pages/home/childCpn/w-list/w-list.wxss */
+/* 表格样式 */
+
+.flex-view-itemtd {
+  
+  width:40%;
+  height:100%;
+  line-height:100rpx;
+  justify-content: center;
+  text-align: center;
+  color:#3C4B56 ;
+  font-size: 24rpx;
+  background-color: white;
+  overflow: hidden;
+ }
+ .flex-view-itemeven {
+  width:40%;
+  height:100%;
+  line-height:100rpx;
+  justify-content: center;
+  text-align: center;
+  color:#3C4B56 ;
+  font-size: 24rpx;
+  background-color:#F5F9FF;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+ }
+
+
+.table {
+  margin-top: 30rpx;
+  border: 0px solid darkgray;
+ }
+ .tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 100rpx;
+  align-items: center;
+  font-size: 24rpx;
+  color:#3C4B56 ;
+ }
+ 
+ .bg-w{
+  background: snow;
+ }
+ .bg-g{
+  background: #fff;
+ }
+ .th {
+  font-weight: 600;
+  width: 40%;
+  justify-content: center;
+  background-color:#F5F9FF;
+  color: #3C4B56;
+  display: flex;
+  height: 100rpx;
+  align-items: center;
+ }
